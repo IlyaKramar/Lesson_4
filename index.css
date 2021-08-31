@@ -1,0 +1,63 @@
+.container {
+    width: 700px;
+    height: 700px;
+    padding: 2px;
+    background-color: aqua;
+    position: relative;
+}
+
+.square {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    animation-name: figurechange;
+    animation-duration: 18s;
+    animation-timing-function: ease;
+    animation-iteration-count: 2;
+}
+
+/* .circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+} */
+
+.purple {
+    background-color: purple;
+}
+
+.green {
+    background-color: green;
+}
+
+@keyframes figurechange {
+    0% {
+        transform: rotateZ (0deg);
+        transform: translateX(10px);
+    }
+    25% {
+        transform: rotateZ (-5deg);
+        transform: translate(550px, 0px);
+        border-radius: 50%;
+        background-color: purple;
+    }
+    50% {
+        transform: rotateZ (5deg);
+        transform: translate(550px, 550px);
+        background-color: red;
+        border-radius: 0%;
+    }
+    75% {
+        width: 150px;
+        height: 150px;
+        transform: rotateZ (5deg);
+        transform: translate(0px,550px);
+        background-color: blue;
+        border-radius: 50%;        
+    }   
+    100% {
+        transform: rotateZ(5deg);
+        transform: translate(0px, 0px);
+    }
+}
